@@ -23,8 +23,8 @@ public class Swagger {
 
     private ApiInfo getApiInfo(){
         return new ApiInfoBuilder().title("GreatLearning Week 8 - Restaurant API")
-                .description("Assgnment Swagger")
-                .license("MITT")
+                .description("API Documentation")
+                .license("Licensed toStark Industries Pvt. Ltd.")
                 .build();
     }
 
