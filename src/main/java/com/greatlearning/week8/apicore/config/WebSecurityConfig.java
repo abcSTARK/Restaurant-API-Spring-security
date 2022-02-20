@@ -51,13 +51,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
       http.csrf().disable().authorizeRequests()
               .antMatchers("/getFullMenu","/getFullMenu/**").hasAnyAuthority("USER","ADMIN")
-              .antMatchers("/placeOrder/**").hasAuthority("ADMIN")
-              .antMatchers("addUser","/getAllUsers","/getUserByName/*").hasAuthority("ADMIN")
+              .antMatchers("/placeOrder/**").hasAnyAuthority("ADMIN","USER")
+              .antMatchers("addUser","/getAllUsers","/getUserById/**").hasRole("ADMIN")
+              .antMatchers("addUser","/getAllUsers","/getUserById/**").hasAuthority("ADMIN")
               .antMatchers("/").permitAll().and().formLogin()
               .and()
               .logout().permitAll()
-              .and()
-              .exceptionHandling().accessDeniedPage("/403");
+              ;
 
 
     }
