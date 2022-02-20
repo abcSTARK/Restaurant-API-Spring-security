@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RestController(value ="Food Menu Here ! ")
+@RestController
 public class foodMenuController {
     @Autowired
     private ProductService service;

@@ -7,8 +7,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import java.util.List;
 
-public class UserDetailsServiceImpl implements UserDetailsService {
+
+public class UserDetailsServiceImpl implements UserDetailsService,AdminService {
 
     @Autowired
     private UserRepository userRepository;
@@ -25,4 +27,17 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return new MyUserDetails(user);
     }
 
+    public List<User> listAll() {
+        return userRepository.getAllUser();
+    }
+
+    public User get(String name) {
+        User user  =userRepository.getUserByUsername(name);
+
+        return user;
+    }
+
+    public void addUser(int id, String username, String password, String email) {
+        userRepository.addUser(id,email,username,password);
+    }
 }

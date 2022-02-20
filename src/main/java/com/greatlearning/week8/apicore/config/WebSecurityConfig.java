@@ -46,25 +46,19 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     @Override
-    public void configure(WebSecurity web) throws Exception {
-        web.ignoring().antMatchers("/placeOrder/*");
-
-    }
-
-    @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/").hasAnyAuthority("ADMIN", "USER")
-                .antMatchers("/getFullMenu").hasAnyAuthority("ADMIN", "USER")
-                .antMatchers("/getFullMenu/**").hasAnyAuthority("ADMIN", "USER")
-                .antMatchers("/placeOrder/**").hasAuthority("ADMIN")
-                .anyRequest().authenticated()
-                .and()
-                .formLogin().permitAll()
-                .and()
-                .logout().permitAll()
-                .and()
-                .exceptionHandling().accessDeniedPage("/403")
-        ;
+
+
+      http.csrf().disable().authorizeRequests()
+              .antMatchers("/getFullMenu","/getFullMenu/**").hasAnyAuthority("USER","ADMIN")
+              .antMatchers("/placeOrder/**").hasAuthority("ADMIN")
+              .antMatchers("addUser","/getAllUsers","/getUserByName/*").hasAuthority("ADMIN")
+              .antMatchers("/").permitAll().and().formLogin()
+              .and()
+              .logout().permitAll()
+              .and()
+              .exceptionHandling().accessDeniedPage("/403");
+
+
     }
 }
