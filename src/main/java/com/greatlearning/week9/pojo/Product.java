@@ -1,4 +1,4 @@
-package com.greatlearning.week8.pojo;
+package com.greatlearning.week9.pojo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +13,14 @@ public class Product {
     private String madein;
     private float price;
 
-    protected Product() {
+    public Product(int food_id, String name, String madein, float price) {
+        this.food_id = food_id;
+        this.name = name;
+        this.madein = madein;
+        this.price = price;
+    }
+
+    public Product() {
     }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

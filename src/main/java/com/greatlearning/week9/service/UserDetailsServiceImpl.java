@@ -1,14 +1,12 @@
-package com.greatlearning.week8.service;
+package com.greatlearning.week9.service;
 
-import com.greatlearning.week8.pojo.User;
+import com.greatlearning.week9.pojo.User;
 
-import com.greatlearning.week8.repository.UserRepository;
+import com.greatlearning.week9.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
-import java.util.List;
 
 
 public class UserDetailsServiceImpl implements UserDetailsService {

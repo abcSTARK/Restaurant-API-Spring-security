@@ -1,16 +1,11 @@
-package com.greatlearning.week8.controller;
+package com.greatlearning.week9.controller;
 
-import com.greatlearning.week8.pojo.Product;
-import com.greatlearning.week8.pojo.User;
-import com.greatlearning.week8.repository.UserRepository;
+import com.greatlearning.week9.pojo.User;
 
-import com.greatlearning.week8.service.AdminService;
-import com.greatlearning.week8.service.UserDetailsServiceImpl;
+import com.greatlearning.week9.service.AdminService;
 import com.sun.istack.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -39,10 +34,10 @@ public class AdminController {
     }
 
     @PostMapping("/addUser")
-    public String buyByIds(@RequestParam Long id, String username , String password, String email) {
+    public User addUser(@RequestParam Long id, String username , String password, String email) {
         log.info("Adding user by Id");
         User user = new User(id,username,password,email,true);
-        service.addUser(user);
-        return "User Added !! ";
+
+        return service.addUser(user);
     }
 }

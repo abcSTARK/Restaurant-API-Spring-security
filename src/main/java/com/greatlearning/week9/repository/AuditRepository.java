@@ -1,6 +1,6 @@
-package com.greatlearning.week8.repository;
+package com.greatlearning.week9.repository;
 
-import com.greatlearning.week8.pojo.AuditLog;
+import com.greatlearning.week9.pojo.AuditLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

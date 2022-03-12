@@ -1,8 +1,8 @@
-package com.greatlearning.week8.service;
+package com.greatlearning.week9.service;
 
 
-import com.greatlearning.week8.pojo.User;
-import com.greatlearning.week8.repository.AdminRepository;
+import com.greatlearning.week9.pojo.User;
+import com.greatlearning.week9.repository.AdminRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -24,7 +24,8 @@ public class AdminService {
         return repo.getUserByUserId(id);
     }
 
-    public void addUser(User user) {
+    public User addUser(User user) {
         repo.save(user);
+        return user;
     }
 }

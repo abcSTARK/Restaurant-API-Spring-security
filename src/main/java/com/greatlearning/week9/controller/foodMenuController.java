@@ -1,9 +1,8 @@
-package com.greatlearning.week8.controller;
+package com.greatlearning.week9.controller;
 
-import com.greatlearning.week8.pojo.Product;
-import com.greatlearning.week8.service.ProductService;
+import com.greatlearning.week9.pojo.Product;
+import com.greatlearning.week9.service.ProductService;
 import com.sun.istack.NotNull;
-import io.swagger.models.auth.In;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

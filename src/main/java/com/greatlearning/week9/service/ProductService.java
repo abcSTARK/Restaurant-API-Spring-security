@@ -1,9 +1,9 @@
-package com.greatlearning.week8.service;
+package com.greatlearning.week9.service;
 
 import java.util.List;
 
-import com.greatlearning.week8.pojo.Product;
-import com.greatlearning.week8.repository.ProductRepository;
+import com.greatlearning.week9.pojo.Product;
+import com.greatlearning.week9.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,8 +19,9 @@ public class ProductService {
         return repo.findAll();
     }
 
-    public void save(Product product) {
+    public Product save(Product product) {
         repo.save(product);
+        return product;
     }
 
     public Product get(int food_id) {
