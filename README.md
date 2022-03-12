@@ -4,6 +4,8 @@
 - DB based Authentication
 - Role Based Access
 - Spring AOP
+- JUnit 5 Test Cases
+- Mockito Implementation
 
 # Steps To Use
 - go to /login screen
