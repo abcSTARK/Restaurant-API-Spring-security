@@ -6,11 +6,11 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 
 @SpringBootApplication
 @EnableWebSecurity
-public class Week8Application {
+public class FestiveSaleApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(Week8Application.class, args);
+		SpringApplication.run(FestiveSaleApplication.class, args);
 	}
 
 }

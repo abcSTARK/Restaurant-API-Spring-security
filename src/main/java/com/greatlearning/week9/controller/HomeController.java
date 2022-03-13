@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @GetMapping("/")
     public String home(){
-        return ("<h1> Welcome ! Now Login and Go to Swagger Page </h1>");
+        return ("<h1> Welcome to FestivalSale Miroservice! Now go to Swagger Page </h1>");
     }
 }

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.greatlearning</groupId>
-	<artifactId>week8</artifactId>
+	<artifactId>FestiveSaleMicroservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>week8</name>
 	<description>Restaurant API</description>

@@ -17,12 +17,12 @@ public class Swagger {
     @Bean
     public Docket SwaggerDocket(){
         return new Docket(DocumentationType.SWAGGER_2).apiInfo(getApiInfo()).groupName("Restaurant APIs")
-                .select().apis(RequestHandlerSelectors.basePackage("com.greatlearning.week8.controller"))
+                .select().apis(RequestHandlerSelectors.basePackage("com.greatlearning.week9.controller"))
                 .build();
     }
 
     private ApiInfo getApiInfo(){
-        return new ApiInfoBuilder().title("GreatLearning Week 8 - Restaurant API")
+        return new ApiInfoBuilder().title("GreatLearning Week 10 - FestiveSale API")
                 .description("API Documentation")
                 .license("Licensed toStark Industries Pvt. Ltd.")
                 .build();
